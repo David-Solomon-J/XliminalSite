@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "../Components/NavBar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -42,26 +43,42 @@ function NavBar() {
         
             {/* <!-- Right elements --> */}
             <div class="navbar-nav d-flex ms-auto show">
-              <a class="nav-link px-5" href="#">
-              <FontAwesomeIcon icon="fa-solid fa-circle" /><br/>
-                  Home Page
-                  </a>
-              <a class="nav-link px-5" href="#portfolio">
-              <FontAwesomeIcon icon="fa-solid fa-book-open" /><br/>
-                  Portfolio
-                  </a>
-              <a class="nav-link px-5" href="#process">
-              <FontAwesomeIcon icon="fa-solid fa-shoe-prints" /><br/>
-                  Process
-                  </a>
-              <a class="nav-link px-5" href="#">
-              <FontAwesomeIcon icon="fa-solid fa-dollar-sign" /><br/>
-                  Pricing
-                  </a>
-              <a class="nav-link px-5" href="#contact">
-              <FontAwesomeIcon icon="fa-solid fa-phone" /><br/>
-                  Contact
-                  </a>
+              <Link to="/">
+                <a class="nav-link px-5" href="#">
+                <FontAwesomeIcon icon="fa-solid fa-circle" /><br/>
+                    Home Page
+                    </a>
+              </Link>
+
+              <Link to="/Portfolio">
+                <a class="nav-link px-5" href="#portfolio">
+                <FontAwesomeIcon icon="fa-solid fa-book-open" /><br/>
+                    Portfolio
+                </a>
+              </Link>
+
+              <Link to="/Process">
+                  <a class="nav-link px-5" href="#process">
+                  <FontAwesomeIcon icon="fa-solid fa-shoe-prints" /><br/>
+                      Process
+                      </a>
+              </Link>
+
+              <Link to = "/Prices">
+                <a class="nav-link px-5" href="#">
+                <FontAwesomeIcon icon="fa-solid fa-dollar-sign" /><br/>
+                    Pricing
+                    </a>
+              </Link>
+
+              <Link to = "/Contact">            
+                <a class="nav-link px-5" href="#contact">
+                <FontAwesomeIcon icon="fa-solid fa-phone" /><br/>
+                    Contact
+                    </a>
+              </Link>  
+
+
             </div>
             {/* <!-- Right elements --> */}
           </div>

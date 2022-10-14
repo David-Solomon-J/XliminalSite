@@ -1,10 +1,9 @@
 import React from "react";
-import "../Components/PageBody.css"
-import NavBar from "./NavBar";
+import "../Components/Process.css"
 import HolderImg from "../Images/pracImg1.png"
-import HrdPic from "../Images/vrSet.jpg"
+import NavBar from "./NavBar";
 
-function PageBody() {
+function Process() {
 
     return (
         <div>
@@ -25,38 +24,42 @@ function PageBody() {
 
         </div>
 
-            <div class="tag" id="portfolio"/> 
-
-        <div class="container text-center mt-5">
-            <h3>Save time and money on fewer change orders, <br/> faster design turnaround and accurate visuals.</h3>
-        </div>
-
-        <div class="col d-flex justify-content-center">
-            <div class="card mt-5 mb-5">
-            <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/>
-                <div class="card-body">
-                    <h3 class="card-title text-start">Check out out portfolio</h3>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tag" id ="process"/> 
-
         <div class="container text-center mt-5" >
-            <h3>The process is simple.</h3>
+            <h3>The xLiminal Workstation provides much more <br/> than virtual reality.</h3>
         </div>
 
         <div class="col d-flex justify-content-center">
-        <div class="card mt-5 mb-5">
-            <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/>
-                <div class="card-body">
-                    <h3 class="card-title text-start">Learn more about the process</h3>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            {/* <div class="card mt-5 mb-5">
+                <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/>
+                    <div class="card-body">
+                        <h3 class="card-title text-start">Learn more about the process</h3>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+            </div> */}
+            <div class="container">
+                <div class="card crd text-center">
+                    <div class="card-body">
+                        <h3>This is some text within a card body.</h3>
+                    </div>
                 </div>
-        </div>
+                <div class="card crd text-center">
+                    <div class="card-body">
+                        <h4>This is some text within a card body.</h4>
+                    </div>
+                </div>
+                <div class="card crd text-center">
+                    <div class="card-body">
+                        <h4>This is some text within a card body.</h4>
+                    </div>
+                </div>
+                <div class="card crd text-center">
+                    <div class="card-body">
+                        <h4>This is some text within a card body.</h4>
+                    </div>
+                </div>
+            
+            </div>
         </div>
 
         <div class="tag" id ="contact"/> 
@@ -85,4 +88,4 @@ function PageBody() {
     );
 }
 
-export default PageBody;
+export default Process;

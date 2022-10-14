@@ -36,9 +36,23 @@ div.tag{
 }
 
 .crd{
-  width: 60%;
-  height: 600px;
+  margin: 5rem;
 
+}
+
+.crdPrac1{
+  /* margin:3rem; */
+  height: 600px
+
+}
+.crdPrac2{
+  margin:3rem;
+  height: 550px
+
+}
+
+.rw{
+  margin: 10rem;
 }
 
 .frm{

@@ -1,0 +1,41 @@
+.hd {
+    position: relative;
+    margin-top: 58px;
+    text-align: left;
+    height: 100%;
+    color: white;
+    background-color: #7851a9;
+  }
+  
+  div.hd img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    margin-right: 3rem; 
+  }
+
+.headerTx {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 5em;
+    letter-spacing: -2px;
+
+  } 
+
+.headerSubTx {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 2em;    
+  } 
+  
+.pic {
+  height: 100%;
+}
+
+div.tag{
+  padding-top: 58px;
+}
+
+.crd {
+    width: 75rem;
+    height: 15rem;
+}
