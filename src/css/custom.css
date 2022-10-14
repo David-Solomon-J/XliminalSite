@@ -1,0 +1,69 @@
+.hero {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  text-align: left;
+  /*background-image: url("../Images/heroImage.png");*/
+}
+.hero h1 {
+  font-weight:bold;
+  font-style:normal;
+  color: white;
+  font-size: 6vw;
+  text-align: left;
+}
+.hero h2 {
+  font-weight:lighter;
+  font-style:normal;
+  color: white;
+  font-size: 5vw;
+  text-align: left;
+  line-height: 5vw;
+}
+.hero h3 {
+  font-weight:normal;
+  font-style:normal;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+}
+.heroButtonHolder {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  text-align: left;
+}
+
+.paddingTopSm {
+  padding-top: 20px;
+}
+.paddingTopMd {
+  padding-top: 40px;
+}
+.paddingTopLg {
+  padding-top: 60px;
+}
+.paddingBottomSm {
+  padding-bottom: 20px;
+}
+.paddingBottomMd {
+  padding-bottom: 40px;
+}
+.paddingBottomLg {
+  padding-bottom: 60px;
+}
+.paddingVirticleSm {
+  padding: 20px 0 20px 0;
+}
+.paddingVirticleMd {
+  padding: 40px 0 40px 0;
+}
+.paddingVirticleLg {
+  padding: 60px 0 60px 0;
+}
+img.cardImageHolder {
+  padding: 50px;
+}
+.cardWidthMd {
+  max-width: 50%;
+}
