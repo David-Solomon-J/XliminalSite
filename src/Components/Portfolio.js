@@ -1,11 +1,24 @@
-import React from "react";
+import React, {Component} from "react";
 import "../Components/PageBody.css"
 import "../css/custom.css"
 import HolderImg from "../Images/pracImg1.png"
 import HeroImg from "../Images/heroImage.png"
 import NavBar from "./NavBar";
+import {motion} from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquare } from "@fortawesome/free-solid-svg-icons";
+import BgVideo from '../Images/Video.mp4';
+import Masonry from 'react-masonry-css'
+import { useState } from 'react';
 
 function Portfolio() {
+
+  let[axisX = 0, setX] = useState(0);
+  let[axisY = 0, setY] = useState(0);
+  let[trans = 0, setT] = useState(0);
+  let[scale = 1, setS] = useState(1);
+  let[axisZ = 0, setZ] = useState(0);
+  let[flag, setF] = useState(false);
 
     return (
       <div>
@@ -36,24 +49,55 @@ function Portfolio() {
         <div class="container">
           <div class="row gy-3 g-3">
             <div class="col-md-8">
-              <div class="card">
-                <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/>
+              <motion.div 
+              class="card"
+
+              >
+
+                <video class="card-img-top pic" src={BgVideo} id="myVideo" alt="Card image cap" controls/>
                 <div class="card-body">
                   <h3 class="card-title text-start">Learn more about the process</h3>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
-              </div>
+              </motion.div>
             </div>
+
             <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/>
+            <motion.div 
+              class="card h-100"
+              animate={{x: axisX, y: axisY, transition: trans, scale: scale, zIndex: axisZ}}>
+
+                  <video class="card-img-top pic" src={BgVideo} id="myVideo" alt="Card image cap" controls/>
                 <div class="card-body">
                   <h3 class="card-title text-start">Learn more about the process</h3>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <motion.div 
+                  class="card-footer d-flex justify-content-end"
+                  onClick = {() =>{ 
+                    if(flag == false){
+                        setX(axisX = -400)
+                        setY(axisY =200)
+                        setT(trans = {duration: .5})
+                        setS(scale = 1.7)
+                        setZ(axisZ = 5)
+                        setF(flag = true) 
+                    }else {
+                        setX(axisX = 0)
+                        setY(axisY = 0)
+                        setT(trans = {duration: 2})
+                        setS(scale = 1)
+                        setZ(axisZ = 5)
+                        setF(flag = false) 
+                    }
+                  }}
+                  >
+                  <FontAwesomeIcon icon={faSquare} />
+                  </motion.div>
+                  
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <div class="col-md-4">
@@ -97,6 +141,47 @@ function Portfolio() {
               <h3>Intrested in a demo or have questions?</h3>
             </div>
           </div>
+
+          <div class="container-fluid">
+
+          <Masonry
+            breakpointCols={2}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+
+              <div class="card">
+                {/* <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/> */}
+                <div class="card-body">
+                  <h3 class="card-title text-start">Learn more about the process</h3>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+              <video class="card-img-top pic" src={BgVideo} id="myVideo" alt="Card image cap" controls/>
+                <div class="card-body">
+                  <h3 class="card-title text-start">Learn more about the process</h3>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                {/* <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/> */}
+                <div class="card-body">
+                  <h3 class="card-title text-start">Learn more about the process</h3>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+
+          </Masonry>
+
+          </div>
+        
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <form>
