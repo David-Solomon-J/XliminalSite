@@ -156,17 +156,44 @@ function Portfolio() {
                   <h3 class="card-title text-start">Learn more about the process</h3>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
                 </div>
               </div>
 
-              <div class="card">
+              <motion.div 
+              class="card"
+              animate={{x: axisX, y: axisY, transition: trans, scale: scale, zIndex: axisZ}}
+              >
               <video class="card-img-top pic" src={BgVideo} id="myVideo" alt="Card image cap" controls/>
                 <div class="card-body">
                   <h3 class="card-title text-start">Learn more about the process</h3>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+                  <motion.div 
+                  class="card-footer d-flex justify-content-end"
+                  onClick = {() =>{ 
+                    if(flag == false){
+                        setX(axisX = 300)
+                        setY(axisY = 10)
+                        setT(trans = {duration: .5})
+                        setS(scale = 1.2)
+                        setZ(axisZ = 5)
+                        setF(flag = true) 
+                    }else {
+                        setX(axisX = 0)
+                        setY(axisY = 0)
+                        setT(trans = {duration: 2})
+                        setS(scale = 1)
+                        setZ(axisZ = 5)
+                        setF(flag = false) 
+                    }
+                  }}
+                  >
+                  <FontAwesomeIcon icon={faSquare} />
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
 
               <div class="card">
                 {/* <img class="card-img-top pic" src={HolderImg} alt="Card image cap"/> */}
