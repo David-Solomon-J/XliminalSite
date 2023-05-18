@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import "../Components/PageBody.css"
-import "../css/custom.css"
+
 import HolderImg from "../Images/pracImg1.png"
 import HeroImg from "../Images/heroImage.png"
 import NavBar from "./NavBar";
@@ -51,7 +50,7 @@ function Portfolio() {
         <div class="container">
           <div class="row gy-3 g-3">
             <div class="col-md-8">
-              <motion.div 
+              <motion.div
               class="card"
 
               >
@@ -66,7 +65,7 @@ function Portfolio() {
             </div>
 
             <div class="col-md-4">
-            <motion.div 
+            <motion.div
               class="card h-100"
               animate={{x: axisX, y: axisY, transition: trans, scale: scale, zIndex: axisZ}}>
 
@@ -75,29 +74,29 @@ function Portfolio() {
                   <h3 class="card-title text-start">Learn more about the process</h3>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <motion.div 
+                  <motion.div
                   class="card-footer d-flex justify-content-end"
-                  onClick = {() =>{ 
+                  onClick = {() =>{
                     if(flag == false){
                         setX(axisX = -400)
                         setY(axisY =200)
                         setT(trans = {duration: .5})
                         setS(scale = 1.7)
                         setZ(axisZ = 5)
-                        setF(flag = true) 
+                        setF(flag = true)
                     }else {
                         setX(axisX = 0)
                         setY(axisY = 0)
                         setT(trans = {duration: 2})
                         setS(scale = 1)
                         setZ(axisZ = 5)
-                        setF(flag = false) 
+                        setF(flag = false)
                     }
                   }}
                   >
                   <FontAwesomeIcon icon={faSquare} />
                   </motion.div>
-                  
+
                 </div>
               </motion.div>
             </div>
@@ -162,7 +161,7 @@ function Portfolio() {
                 </div>
               </div>
 
-              <motion.div 
+              <motion.div
               class="card"
               animate={{x: axisX, y: axisY, transition: trans, scale: scale, zIndex: axisZ}}
               >
@@ -172,23 +171,23 @@ function Portfolio() {
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-                  <motion.div 
+                  <motion.div
                   class="card-footer d-flex justify-content-end"
-                  onClick = {() =>{ 
+                  onClick = {() =>{
                     if(flag == false){
                         setX(axisX = 300)
                         setY(axisY = 10)
                         setT(trans = {duration: .5})
                         setS(scale = 1.2)
                         setZ(axisZ = 5)
-                        setF(flag = true) 
+                        setF(flag = true)
                     }else {
                         setX(axisX = 0)
                         setY(axisY = 0)
                         setT(trans = {duration: 2})
                         setS(scale = 1)
                         setZ(axisZ = 5)
-                        setF(flag = false) 
+                        setF(flag = false)
                     }
                   }}
                   >
@@ -210,7 +209,7 @@ function Portfolio() {
           </Masonry>
 
           </div>
-        
+
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <form>

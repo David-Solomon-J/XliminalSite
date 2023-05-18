@@ -14,15 +14,15 @@ function NavBar() {
 
     return (
       <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
           {/* <!-- Container wrapper --> */}
           <div class="container-fluid">
-          <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                xLiminal Archviz Solutions
+          <a class="navbar-brand mt-0 mt-lg-0 navpaddingLeft" href="#">
+                xLiminal
               </a>
             {/* <!-- Toggle button --> */}
             <button
-              class="navbar-toggler"
+              class="navbar-toggler navpaddingRight"
               type="button"
               data-mdb-toggle="collapse"
               data-mdb-target="#navbarSupportedContent"
@@ -42,12 +42,15 @@ function NavBar() {
             {/* <!-- Collapsible wrapper --> */}
 
             {/* <!-- Right elements --> */}
-            <div class="navbar-nav d-flex ms-auto show">
-              <Link to="/"><a class="nav-link px-5" href="#">Home</a></Link>
-              <Link to="/Portfolio"><a class="nav-link px-5" href="#portfolio">Portfolio</a></Link>
-              <Link to="/Process"><a class="nav-link px-5" href="#process">Process</a></Link>
-              <Link to = "/Prices"><a class="nav-link px-5" href="#">Pricing</a></Link>
-              <Link to = "/Contact"><a class="nav-link px-5" href="#contact">Contact</a></Link>
+            <div class="navbar-nav d-flex ms-auto show navpaddingRight">
+              <Link to="/"><a class="nav-link px-1" href="#">Home</a></Link>
+              <Link to="/Portfolio"><a class="nav-link px-1" href="#portfolio">Portfolio</a></Link>
+              <Link to="/Process"><a class="nav-link px-1" href="#process">Process</a></Link>
+              <Link to = "/Prices"><a class="nav-link px-1" href="#">Pricing</a></Link>
+              <Link to = "/Contact"><a class="nav-link px-1" href="#contact">Contact</a></Link>
+              <Link to = "/Developers"><a class="nav-link px-1" href="#developers">Developers</a></Link>
+              <Link to = "/Architects"><a class="nav-link px-1" href="#architects">Architects</a></Link>
+              <Link to = "/CaseStudies"><a class="nav-link px-1" href="#CaseStudies">Case Studies</a></Link>
             </div>
             {/* <!-- Right elements --> */}
           </div>

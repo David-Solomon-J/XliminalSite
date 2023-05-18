@@ -1,5 +1,4 @@
 import React from "react";
-import "../Components/PageBody.css"
 import HeroImg from "../Images/heroImage.png"
 import HolderImg from "../Images/pracImg1.png"
 import NavBar from "./NavBar";
